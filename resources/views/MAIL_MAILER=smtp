@@ -1,0 +1,8 @@
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=465
+MAIL_USERNAME=manuelalcopar01@aragon.unam.mx
+MAIL_PASSWORD=Ocotitoguerrero2
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=queonda2@bicislocas.club
+MAIL_FROM_NAME="${APP_NAME}"

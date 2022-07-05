@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>GEA Capital</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href = "font/stylesheet.css" rel = "stylesheet" type = "text/css" />
+         <link rel="shortcut icon" href="/imagenes/GEA/GEA.png">
+        <!-------Fonts----------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fenix&display=swap" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!-- Styles -->
+       
+<style type="text/css">
+    .carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+.container-fluid{
+  padding-right: var(--bs-gutter-x, 0.001rem);
+  padding-left: var(--bs-gutter-x, 0.001rem);
+}
+body{
+ /* background-image:url('imagenes/GEA/Fondo GEA obscuro 2.png');*/
+
+background-position:right;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+
+}
+p{
+  font-family: 'Fenix', serif;;
+}
+h5{
+  font-family: 'Fenix', serif;;
+}
+h1 {font-family: 'Incompleeta';
+}
+
+input::placeholder {
+  font-family: 'Fenix', serif;;
+}
+textarea::placeholder {
+  font-family: 'Fenix', serif;;
+}
+.people-wrap {
+  
+  display: flex;
+  align-items: center
+}
+.img 
+{
+  display: block
+  /* remove gap*/
+}
+</style>
+ <script type="text/javascript">
+$(document).ready(function () {
+ var tamaño= window.innerWidth;
+ var salto = 0;
+ if (tamaño> 770 ) {
+  salto= 2;
+ }else{
+  salto = 10;
+ }
+  var altura = 200;
+  var section1 = $("#Conocenos").offset().top;
+  var section2 = $("#Carta").offset().top;
+  var section3 = $("#Desarrollos").offset().top;
+  var section4 = $("#Socios").offset().top;
+  var section5 = $("#Inversionistas").offset().top;
+  var section6 = $("#Contacto").offset().top;
+  var imgCarta = $("#imgCarta").offset().top;
+  var imgDesa = $("#imgDesa").offset().top;
+  var imgSocio = $("#imgSocio").offset().top;
+  var imgInv = $("#imgInv").offset().top;
+  var imgCon = $("#imgCon").offset().top;
+
+var cono = document.getElementById('cono');
+var carta = document.getElementById('carta');
+var cartaEn = document.getElementById('cartaEn');
+var desa = document.getElementById('desa');
+var socios = document.getElementById('socios');
+var inv = document.getElementById('inv');
+var cont = document.getElementById('cont');
+      
+  $(window).scroll(function () {
+        if ($(window).scrollTop() < section1) {
+      
+      cono.style.backgroundColor = 'white';
+      conoEn.style.color = '';
+      carta.style.backgroundColor = 'white';
+      cartaEn.style.color = '';
+      desa.style.backgroundColor = 'white';
+      desaEn.style.color = '';
+      socios.style.backgroundColor = 'white';
+      sociosEn.style.color = '';
+      inv.style.backgroundColor = 'white';
+      invEn.style.color = '';
+      cont.style.backgroundColor = 'white';
+      contEn.style.color = '';
+    }
+    
+    if ($(window).scrollTop() >= section1 -salto) {
+      
+      cono.style.backgroundColor = '#05123C';
+      conoEn.style.color = 'white';
+      carta.style.backgroundColor = 'white';
+      cartaEn.style.color = '';
+      desa.style.backgroundColor = 'white';
+      desaEn.style.color = '';
+      socios.style.backgroundColor = 'white';
+      sociosEn.style.color = '';
+      inv.style.backgroundColor = 'white';
+      invEn.style.color = '';
+      cont.style.backgroundColor = 'white';
+      contEn.style.color = '';
+
+    }
+    if ($(window).scrollTop() >= imgCarta) {
+      
+      cono.style.backgroundColor = 'white';
+      conoEn.style.color = '';
+      carta.style.backgroundColor = 'white';
+      cartaEn.style.color = '';
+      desa.style.backgroundColor = 'white';
+      desaEn.style.color = '';
+      socios.style.backgroundColor = 'white';
+      sociosEn.style.color = '';
+      inv.style.backgroundColor = 'white';
+      invEn.style.color = '';
+      cont.style.backgroundColor = 'white';
+      contEn.style.color = '';
+    }
+    
+
+
+    if ($(window).scrollTop() >= section2 -salto) {
+      
+      cono.style.backgroundColor = 'white';
+      conoEn.style.color = '';
+      carta.style.backgroundColor = '#101010';
+      cartaEn.style.color = 'white';
+      desa.style.backgroundColor = 'white';
+      desaEn.style.color = '';
+      socios.style.backgroundColor = 'white';
+      sociosEn.style.color = '';
+      inv.style.backgroundColor = 'white';
+      invEn.style.color = '';
+      cont.style.backgroundColor = 'white';
+      contEn.style.color = '';
+    }
+    if ($(window).scrollTop() >= imgDesa) {
+      
+      cono.style.backgroundColor = 'white';
+      conoEn.style.color = '';
+      carta.style.backgroundColor = 'white';
+      cartaEn.style.color = '';
+      desa.style.backgroundColor = 'white';
+      desaEn.style.color = '';
+      socios.style.backgroundColor = 'white';
+      sociosEn.style.color = '';
+      inv.style.backgroundColor = 'white';
+      invEn.style.color = '';
+      cont.style.backgroundColor = 'white';
+      contEn.style.color = '';
+    }
+
+    if ($(window).scrollTop() >= section3 -2) {
+      
+      cono.style.backgroundColor = 'white';
+      conoEn.style.color = '';
+      carta.style.backgroundColor = 'white';
+      cartaEn.style.color = '';
+      desa.style.backgroundColor = '#38343c';
+      desaEn.style.color = 'white';
+      socios.style.backgroundColor = 'white';
+      sociosEn.style.color = '';
+      inv.style.backgroundColor = 'white';
+      invEn.style.color = '';
+      cont.style.backgroundColor = 'white';
+      contEn.style.color = '';
+    }
+    if ($(window).scrollTop() >= imgSocio) {
+      
+      cono.style.backgroundColor = 'white';
+      conoEn.style.color = '';
+      carta.style.backgroundColor = 'white';
+      cartaEn.style.color = '';
+      desa.style.backgroundColor = 'white';
+      desaEn.style.color = '';
+      socios.style.backgroundColor = 'white';
+      sociosEn.style.color = '';
+      inv.style.backgroundColor = 'white';
+      invEn.style.color = '';
+      cont.style.backgroundColor = 'white';
+      contEn.style.color = '';
+    }
+
+    if ($(window).scrollTop() >= section4 - salto) {
+      
+      cono.style.backgroundColor = 'white';
+      conoEn.style.color = '';
+      carta.style.backgroundColor = 'white';
+      cartaEn.style.color = '';
+      desa.style.backgroundColor = 'white';
+      desaEn.style.color = '';
+      socios.style.backgroundColor = '#101010';
+      sociosEn.style.color = 'white';
+      inv.style.backgroundColor = 'white';
+      invEn.style.color = '';
+      cont.style.backgroundColor = 'white';
+      contEn.style.color = '';
+    }
+    if ($(window).scrollTop() >= imgInv) {
+      
+      cono.style.backgroundColor = 'white';
+      conoEn.style.color = '';
+      carta.style.backgroundColor = 'white';
+      cartaEn.style.color = '';
+      desa.style.backgroundColor = 'white';
+      desaEn.style.color = '';
+      socios.style.backgroundColor = 'white';
+      sociosEn.style.color = '';
+      inv.style.backgroundColor = 'white';
+      invEn.style.color = '';
+      cont.style.backgroundColor = 'white';
+      contEn.style.color = '';
+    }
+    if ($(window).scrollTop() >= section5 -2) {
+      
+      cono.style.backgroundColor = 'white';
+      conoEn.style.color = '';
+      carta.style.backgroundColor = 'white';
+      cartaEn.style.color = '';
+      desa.style.backgroundColor = 'white';
+      desaEn.style.color = '';
+      socios.style.backgroundColor = 'white';
+      sociosEn.style.color = '';
+      inv.style.backgroundColor = '#101010';
+      invEn.style.color = 'white';
+      cont.style.backgroundColor = 'white';
+      contEn.style.color = '';
+    }
+    if ($(window).scrollTop() >= section6 -2) {
+      
+      cono.style.backgroundColor = 'white';
+      conoEn.style.color = '';
+      carta.style.backgroundColor = 'white';
+      cartaEn.style.color = '';
+      desa.style.backgroundColor = 'white';
+      desaEn.style.color = '';
+      socios.style.backgroundColor = 'white';
+      sociosEn.style.color = '';
+      inv.style.backgroundColor = 'white';
+      invEn.style.color = '';
+      cont.style.backgroundColor = '#101010';
+      contEn.style.color = 'white';
+    }
+  });
+
+
+  $(".inicio").click(function () {
+    $("html, body").animate({scrollTop: $("#section").offset().top}, 500);
+  });
+
+  $(".nosotros").click(function () {
+    $("html, body").animate({scrollTop: $("#section2").offset().top}, 500);
+  });
+
+  $(".trabajos").click(function () {
+    $("html, body").animate({scrollTop: $("#section3").offset().top}, 500);
+  });
+
+  $(".contacto").click(function () {
+    $("html, body").animate({scrollTop: $("#section4").offset().top}, 500);
+  });
+});
+ </script>       
+    </head>
+    <!--style="background-color:#DFDEDC;-->
+    <body>
+<nav class="navbar navbar-expand-md navbar-light bg-light   sticky-top" id="nav"style="padding: 0px !important; ">
+      <div class="container">
+
+        <a class="navbar-brand" href="/">
+            
+            <img src="/imagenes/GEA Capital_GEA.png" style="height: 50px; padding: 0px;" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarCollapse" style="" >
+          <ul class="navbar-nav  mb-2 mb-md-0  ms-auto" style="align-items: center;">
+            <li class="nav-item" id="cono" style=" height: 60px;">
+              <center>
+              <a class="nav-link" id="conoEn" href="#Conocenos" style="font-family: 'Bebas Neue', cursive;">Conócenos</a>
+              </center>
+            </li>
+            <li class="nav-item" id="carta">
+              <center>
+              <a class="nav-link" href="#Carta" id="cartaEn" style="font-family: 'Bebas Neue', cursive; height: 60px;">Carta del director</a>
+              </center>
+            </li>
+            <li class="nav-item" id="desa">
+              <center>
+              <a class="nav-link" href="#Desarrollos" id="desaEn" style="font-family: 'Bebas Neue', cursive; height: 60px;">Desarrollos</a>
+            </center>
+            </li>
+            <li class="nav-item" id="socios">
+              <center>
+              <a class="nav-link" href="#Socios" id="sociosEn" style="font-family: 'Bebas Neue', cursive; height: 60px;">Socios comerciales</a>
+              </center>
+            </li>
+            <li class="nav-item" id="inv">
+              <center>
+              <a class="nav-link" href="#Inversionistas" id="invEn" style="font-family: 'Bebas Neue', cursive;  height: 60px;">Inversionistas</a>
+              </center>
+            </li>
+            <li class="nav-item" id="cont">
+              <a class="nav-link" href="#Contacto" id="contEn" style="font-family: 'Bebas Neue', cursive; height: 60px;">Contacto</a>
+            </li>
+             @if(Auth::check())
+            <li class="nav-item">
+              <a class="nav-link" href="/admin">Administración</a>
+            </li>
+            @endif
+          </ul>
+          
+        </div>
+      </div>
+</nav>
+<main>
+    <!--Inicio de carrusel-->
+    
+   
+    <!------Fin de carrusel---------->
+     <div class="container-fluid text-light" style="padding: 0px; background-color:    #05123C;">
+       <div id="myCarousel1" class="carousel slide" data-bs-ride="carousel"  style="margin-bottom: 0px;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="height: 100%;">
+        <!--Aqui poner la imagen-->
+        <a href="" data-bs-toggle="modal" data-bs-target="#">
+        
+       <img class="img-fluid" src="/imagenes/GEA/Carrousel.png">
+        </a>
+        
+      </div>
+      <div class="carousel-item" style="height: 100%;">
+       <!--Aqui poner la imagen-->
+       <a href="" data-bs-toggle="modal" data-bs-target="#">
+       <img class="d-block w-100" src="/imagenes/A33D0D36-D354-4851-BA29-F75C9071F7F1.png">
+   </a>
+        
+      </div>
+      <div class="carousel-item" style="height: 100%;">
+       <!--Aqui poner la imagen-->
+       <a href="" data-bs-toggle="modal" data-bs-target="#">
+       <img class="d-block w-100" src="/imagenes/D2627AE4-E387-4B39-8690-82509DF9E758.png">
+   </a>
+       
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel1" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Despues</span>
+    </button>
+  </div>
+    
+    <!---¿Quienes somos?--->
+
+    
+      
+    
+        <div class="container" id="Conocenos">
+          <br>
+          <br>
+    <br>
+            <center>
+                <h1 style="font-family: 'Incompleeta';">¿Quiénes somos?</h1>
+                <br>
+                <h5 style="text-align: center;"><u style="font-family: 'Bebas Neue', cursive; background-color: black; color: white;">Somos una empresa mexicana</u> especializada en el <u style="background-color: white; color: #05123C;">desarrollo inmobiliario</u> en constante búsqueda de crear proyectos innovadores de alto impacto que generen valor al entorno urbano, y al mismo tiempo, conectar a clientes e inversionistas con nuestra experiencia operativa.</h5>
+            </center>
+            <br>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <br>
+                  <center>
+                  <h5 style="font-family: 'Incompleeta';">Misión:</h5>
+                  </center>
+                  <h5 style="text-align: justify;">Detectar oportunidades de desarrollo que fomenten el crecimiento socio económico y urbano del entorno, así como mantenernos a la vanguardia gracias al talento de nuestro equipo con el enfoque de crear desarrollos inmobiliarios exitosos.</h5>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <center>
+                    <br>
+                  <h5 style="font-family: 'Incompleeta';">Valores:</h5>
+                  
+                  <h5>
+                    Nuestros valores son:
+                  </h5>
+                  <h5 style="text-align: justify;"><u style="background-color: white; color: #05123C;">Transparencia</u> en todos nuestros procesos, <u style="background-color: white; color: #05123C;">Pasión</u> por nuestros proyectos, <u  style="background-color: white; color: #05123C;">Trabajo en equipo</u> para alcanzar nuestros objetivos, <u style="background-color: white; color: #05123C;">Honestidad</u> con nuestros clientes y colaboradores e <u style="background-color: white; color: #05123C;">Integridad</u> en nuestro ser y hacer.</h5>
+                  </center>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                  <center>
+                    <br>
+                  <h5 style="font-family: 'Incompleeta';">Visión:</h5>
+                  </center>
+                  <h5 style="text-align: justify;">
+                  Potencializar cada proyecto para lograr que Gea Capital sea una empresa líder en el desarrollo inmobiliario, ofreciendo oportunidades de inversión atractivas para nuestros inversionistas y socios comerciales, y crear productos innovadores que puedan satisfacer las necesidades de nuestros clientes en México, Canadá, EE. UU. y Latinoamérica.
+                  </h5>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--Fin de quienes somos-->
+    <!---Carta del director--->
+    
+    <div class="container-fluid" id="imgCarta">
+        <center>
+            <img class="d-block w-100"  src='/imagenes/GEA/Carta director.png'>
+       
+
+       
+        
+            
+        </center>
+        <div class="container-fluid" style="background-image:url('imagenes/GEA/Fondo GEA obscuro 2.png');
+background-position:center;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;">
+        <div class="container" id="Carta">
+        <br>
+         <br>
+            <br>
+           <center>
+          <h1>Carta del director</h1>
+             </center> 
+             <br>
+           <div class="row">
+               <div class="col-lg-8 col-sm-12">
+                    <p style="text-align: justify;">
+                       El mercado inmobiliario es uno de los sectores productivos más relevantes para el desarrollo económico nacional e internacional, esencial para el desarrollo de una economía sostenible dentro de un país. En México, el sector inmobiliario se caracteriza por ser uno de los pilares de progreso económico, ya que participa como una sobresaliente fuente de empleo y generador de riqueza, además de su alta participación dentro del PIB. Por lo que como desarrolladores inmobiliarios debemos mantenernos a la vanguardia y en los estándares más altos de calidad.
+                    </p>
+                    <p style="text-align: justify;">
+                        En los últimos años, México ha incrementado la demanda de inmuebles residenciales, comerciales e industriales en venta y renta, sin embargo, el sector de la vivienda en nuestro país no cubre la demanda que existe actualmente, esto representa para nosotros un reto y una gran oportunidad para poder satisfacer dicha necesidad y brindar a más personas en todo el país nuestros servicios inmobiliarios, así como generar proyectos con una impacto humano, sustentable, urbano y de crecimiento económico.
+                    </p>
+                    <p style="text-align: justify;">
+                      En Gea Capital nos enfocamos en ofrecer el mejor servicio y atención a nuestros inversionistas, así como a nuestros clientes finales.
+                    </p>
+                    <p style="text-align: justify;">
+                      Nos encontramos en una búsqueda constante de oportunidades con un retorno de inversión atractivo para nuestros inversionistas para así poder ofrecerles las mejores alternativas de inversión, así como tierra con gran potencial a desarrollar. Cada uno de nuestros proyectos lleva consigo un enfoque social el cual busca hacer más accesible la industria inmobiliaria a cualquier persona, empresa u organización.
+
+La adquisición de un bien inmueble es una de las decisiones más importantes que una persona u organización puede tomar, por lo que buscamos que nuestros proyectos sean personalizados, funcionales y con la mejor calidad del mercado.
+                    </p>
+               </div>
+               <div class="col-lg-4 col-sm-12">
+                <center>
+                   <img src="/imagenes/Sin nombre.png" class="d-block w-100">
+                   <h3>Director General</h3>
+                   <img src="/imagenes/Firma A corregida blanco.png" style="height: 70px;">
+               </center>
+               </div>
+           </div> 
+        </div>
+      </div>
+    </div>
+    <!--Fin de carta del director-->
+    <!--Desarrollos---->
+  
+    <div class="container-fluid" id="imgDesa"  style="background-color: #33343B; color: white;">
+        
+        <img class="d-block w-100"  src='/imagenes/Desarrollando proyectos para crear nuevos estilos de vida pensados en ti._.png'>
+      
+       
+        <div class="container"  id="Desarrollos">
+           <br>
+        <br>
+        <br>
+        <center>
+            <h1>Desarrollos</h1>
+            
+        </center>
+        <br>
+            <div class="row">
+                <!-------Iconos del edificio---------->
+                <div class="col-lg-5 col-sm-12">
+                    <center>
+                      <img src="/imagenes/GEA/AlcolhuaPequeño.png" style="width: 100%;">
+                       
+                    </center>
+                    <p><u style="font-family: 'Bebas Neue', cursive; background-color: white; color: black;">4 exclusivos departamentos</u> en el corazón de la ciudad de Toluca.</p>
+                    <div>
+                        <div class="">
+                     <center>  
+                    
+                            <h5 style = "line-height: 20px; font-family: 'Bebas Neue', cursive; display: inline; padding: 20px;">
+                              <img src = '/imagenes/GEA/Estacionamiento1.png' width="45" height="45" style='vertical-align: middle' /> 1-2
+                            </h5>
+                       
+                            <h5 style = "line-height: 20px; font-family: 'Bebas Neue', cursive; display: inline; padding: 20px;">
+                              <img src = '/imagenes/GEA/Recámaras1.png' width="50" height="50" style='vertical-align: middle' />2-3
+                            </h5>
+                       
+                            
+                              
+                    
+                    </center> 
+                    <center>
+                      <h5 style = "line-height: 20px; font-family: 'Bebas Neue', cursive; display: inline;">
+                              <img src = '/imagenes/GEA/area-floor-size.png' width="50" height="50" style='vertical-align: middle' />25m<sup>2</sup>
+                            </h5>
+                    </center>  
+                    <center>
+                      <h5 style = "line-height: 20px; font-family: 'Bebas Neue', cursive; display: inline; padding: 20px;">
+                              <img src = '/imagenes/GEA/Baños1.png' width="45" height="45" style='vertical-align: middle' /> 2
+                            </h5>
+                      
+                            <h5 style = 'line-height: 20px; display: inline; padding: 20px;'>
+                              <img src = '/imagenes/GEA/Terraza1.png' width="45" height="45" style='vertical-align: middle' />
+                            </h5>
+                    </center>
+                    </div>
+                    
+                    </div>
+
+                </div>
+                <!------Fin de iconos---------->
+                <div class="col-lg-7 col-sm-12">
+                    <!--Inicio de carrusel-->
+    <div class="container-fluid">
+       <div id="myCarousel" class="carousel slide" data-bs-ride="carousel"  style="margin-bottom: 0px;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="height: 100%;">
+        <!--Aqui poner la imagen-->
+        <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        
+       <img class="img-fluid" src="/imagenes/INAH2_1 - Photo.jpg">
+        </a>
+        
+      </div>
+      <div class="carousel-item" style="height: 100%;">
+       <!--Aqui poner la imagen-->
+       <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+       <img class="d-block w-100" src="/imagenes/INTERIOR_15 - Foto.jpg">
+   </a>
+        
+      </div>
+      <div class="carousel-item" style="height: 100%;">
+       <!--Aqui poner la imagen-->
+       <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+       <img class="d-block w-100" src="/imagenes/INTERIOR_19 - Foto.jpg">
+   </a>
+       
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Despues</span>
+    </button>
+  </div>
+  <br>
+  <br>
+  <br>
+    </div>
+    <!------Fin de carrusel---------->
+    
+  </div>
+
+                    </div>
+<!--Modal: modal carrusel 1-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          
+      </div>
+      <div class="modal-body">
+         <img class="d-block w-100" src="/imagenes/INAH2_1 - Photo.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+    <!---------------------------->
+    <!--Modal: modal carrusel 2-->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          
+      </div>
+      <div class="modal-body">
+         <img class="d-block w-100" src="/imagenes/INTERIOR_15 - Foto.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+    <!--Modal: modal carrusel 3-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          
+      </div>
+      <div class="modal-body">
+         <img class="d-block w-100" src="/imagenes/INTERIOR_19 - Foto.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+    <!---------------------------->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---Fin de desarrollos--->
+    <!------------Inicio de socios comerciales--->
+    
+    <div class="container-fluid"  id="imgSocio">
+        <img class="d-block w-100"  src='/imagenes/GEA/Socios comerciales.png'>
+        
+        <div class="container-fluid" style="background-image:url('imagenes/GEA/Fondo GEA obscuro 2.png');
+background-position:center;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;">
+<div class="container" id="Socios">
+  <br>
+  <br>
+        <br>
+        <center>
+            <h1>Socios Comerciales</h1>
+            <br>
+            <br>
+        </center>
+        <center>
+            <h4><i>Cada año esta industria se reinventa y es por lo que buscamos estar en vanguardia con socios
+comerciales como parte importante de nuestros procesos.</i></h4>
+<br>
+        </center>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <center>
+                <img class="d-block w-100" src="/imagenes/AMIDLogo1.png">
+                </center>
+            </div>
+            <div class="col-lg-3 col-sm-6  col-md-6 d-flex flex-wrap align-items-center">
+                <center>
+                <img  class="d-block w-100" src="/imagenes/LOGO BLANCO 1.png">
+                </center>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6 d-flex flex-wrap align-items-center">
+                <center>
+                <img class="d-block w-100" style="" src="/imagenes/LOGO CODE TRANSPARENTE_Mesa de trabajo 1.1.png">
+                </center>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6  flex-wrap align-items-center">
+                <center>
+                <img class="d-block w-100" src="/imagenes/Logo omni blanco.png">
+                </center>
+            </div>
+        </div>
+      </div>
+      <br>
+        <br>
+        <br>
+    </div>
+        
+    </div>    
+    <!--------Fin de socios comerciales--------------->
+    <!------------Inicio de Inversionistas-------------->
+   <div class="container-fluid" id="imgInv">
+        <img class="d-block w-100"  src='/imagenes/GEA/Inversionistas.png'>
+      </div>
+    <div class="container-fluid" style="background-image:url('imagenes/GEA/Fondo GEA obscuro 2.png');
+background-position:center;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;">
+        
+        
+        
+        <div class="container" id="Inversionistas">
+          <br>
+          <br>
+        <br>
+        <center>
+            <h1>Inversionistas</h1>
+            <br>
+            <br>
+            <br>
+        </center>
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <center>
+                    
+                    
+                    </center>
+                    <br>
+                    <h3 style="text-align: center;">Constantemente estamos en búsqueda de tierra para desarrollar, ofrecer opciones atractivas a nuestros inversionistas de capital y socios comerciales alineados a nuestros valores con quienes trabajar.</h3>
+                </div>
+                <div class="col-lg-8 col-sm-12">
+                     <form method="post" action="blank">
+                {{csrf_field()}}
+                <div class="mb-3">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control" required="" placeholder="Nombre" aria-label="First name">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" required="" placeholder="Apellidos" aria-label="Last name">
+                  </div>
+                </div>
+                <br>
+                <input class="form-control" type="tel" name="Telefono" required="" placeholder="Telefono">
+                <br>
+                <input class="form-control" type="email" name="Correo" required="" placeholder="Correo">
+                <br>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Mensaje"></textarea>
+                <center>
+                    <div class="p-3">
+                 <button type="submit" class="btn btn-secondary btn-round">Enviar</button>
+                 </div>
+                 </center>
+        </form>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <!------------------Fin de inversionistas----------------------------------->
+    <!------------Inicio de Contacto-------------->
+    
+    
+      <hr id="Contacto" >
+      <br>
+      <br>
+        <center>
+            <h1>Contacto</h1>
+            <br>
+        </center>
+        <div class="container" id="imgCon">
+            <div class="row">
+                <div class="col-lg-4  col-sm-12">
+                  <div class="container">
+                    <center>
+                    <i>Información de contacto</i>
+                    <br>
+                    </center>
+                    <br>
+                    
+                    <ul class="nav flex-column">
+                        
+                        <li>
+                            <p style = "line-height: 20px;">
+                              <img src = '/imagenes/iconos/email-symbol.png' width="30" height="30" style='vertical-align: middle' />
+                            <a href="mailto:ivang@geacapital.com.mx" style="padding-left: 5px;">
+                               ivang@geacapital.com.mx
+                               </a>
+                            </p>
+                        </li>
+                        <li>
+
+
+
+
+
+
+                        </li>
+                        <li>
+                          <br>
+                            <p style = "line-height: 20px; ">
+                              <img src = '/imagenes/iconos/world-wide-web.png' width="30" height="30" style='vertical-align: middle' /> 
+                            <span style="padding-left: 5px;">
+                              www.geacapital.com.mx
+                              </span>
+                            </p>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-sm-12">
+                     <form method="post" action="blank">
+                {{csrf_field()}}
+                <div class="mb-3">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control" required="" placeholder="Nombre" aria-label="First name">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" required="" placeholder="Apellidos" aria-label="Last name">
+                  </div>
+                </div>
+                <br>
+                <input class="form-control" type="tel" name="Telefono" required="" placeholder="Telefono">
+                <br>
+                <input class="form-control" type="email" name="Correo" required="" placeholder="Correo">
+                <br>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Mensaje"></textarea>
+                <center>
+                    <div class="p-3">
+                 <button type="submit" class="btn btn-secondary btn-round">Enviar</button>
+                 </div>
+                 </center>
+        </form>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <!------------------Fin de contacto----------------------------------->
+   
+      <!-- FOOTER 
+<footer class="container-fluid" style="background-image: url('/imagenes/GEA Azul y Plateado.png'); padding: 0px">
+      -->
+ <!---     
+  <footer class="text-white" style="background-image: url('/imagenes/GEA Azul y Plateado.png'); padding: 0px;">
+    <div class="container">
+    
+    <ul class="nav flex-column">
+                        <li>
+                            <p style = 'line-height: 20px'>
+                              <img src = '/imagenes/iconos/contact.png' width="30" height="30" style='vertical-align: middle' /> (722) 120 5986
+                            </p>
+                        </li>
+                        <li>
+                            <p style = 'line-height: 20px'>
+                              <img src = '/imagenes/iconos/email-symbol.png' width="30" height="30" style='vertical-align: middle' /> ivang@geacapital.com.mx
+                            </p>
+                        </li>
+                        <li>
+                            <p style = 'line-height: 20px'>
+                              <img src = '/imagenes/iconos/map-pin-point.png' width="30" height="30" style='vertical-align: middle' /> Nezahualtcoyotl 103, colonia 5 de Mayo, Toluca Estado de Mexico
+                            </p>
+                        </li>
+                        
+    </ul>
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2022 GEA Capital &middot; <a href="#" style="color: white;">Privacidad</a> &middot; Hecho por Data Docks</p>
+    </div>
+  </footer>  
+    -->
+      <footer class="container-fluid" style="background-color:#DFDEDC; padding: 0px; color: black;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-12" style="padding-top: 3%; padding-bottom: 3%;">
+        <center>  
+          <img src = '/imagenes/iconos/linkedin-square.svg' width="30" height="30" style='vertical-align: middle' /><span style="padding-left: 5px;">
+          <p style = "line-height: 20px; font-family: 'Bebas Neue', cursive;">
+                               
+                              </p>
+                              </center>
+        </div>
+        <div class="col-lg-4 col-sm-12" style="padding-top: 3%; padding-bottom: 3%;">
+          <center>
+            
+         <img src = '/imagenes/iconos/email-symbol.svg' width="30" height="30" style='vertical-align: middle' />
+          <p style = "line-height: 20px; font-family: 'Bebas Neue', cursive;">
+                                ivang@geacapital.com.mx
+                              </p>
+                              </center>
+        </div>
+        <div class="col-lg-4 col-sm-12" style="padding-top: 3%; padding-bottom: 3%;">
+          <center>
+           <p style = 'line-height: 20px'>
+                                
+                               
+                              </p>
+                              </center>
+          <p>&copy; 2022 Hecho por Data Docks &middot; <a href="#">Privacidad</a></p>
+      
+        </div>
+      </div>
+   </div>
+  
+  </footer>                                   
+</main>
+    <script src="js/bootstrap.js" crossorigin="anonymous"></script>
+
+    </body>
+</html>
